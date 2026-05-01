@@ -36,24 +36,42 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('loading');
     
-    // Simulate network request
-    setTimeout(() => {
-      setFormState('success');
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#D4FF00', '#FF4D00', '#0057FF']
+    // Wire up to Web3Forms
+    const formData = new FormData(e.target);
+    // ⚠️ TODO: Replace this key with your own from web3forms.com
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
       });
-      
-      // Reset form
-      e.target.reset();
-      setTimeout(() => setFormState('idle'), 4000);
-    }, 1500);
+
+      if (response.ok) {
+        setFormState('success');
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#D4FF00', '#FF4D00', '#0057FF']
+        });
+        e.target.reset();
+      } else {
+        setFormState('idle');
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setFormState('idle');
+      alert("Network error. Please try again.");
+    }
+
+    setTimeout(() => {
+      if (formState !== 'idle') setFormState('idle');
+    }, 4000);
   };
 
   return (
@@ -90,15 +108,15 @@ export default function Contact() {
           <div className="contact-form-wrap">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <input type="text" id="name" required placeholder=" " />
+                <input type="text" id="name" name="name" required placeholder=" " />
                 <label htmlFor="name">Name</label>
               </div>
               <div className="form-group">
-                <input type="email" id="email" required placeholder=" " />
+                <input type="email" id="email" name="email" required placeholder=" " />
                 <label htmlFor="email">Email</label>
               </div>
               <div className="form-group">
-                <textarea id="message" rows="4" required placeholder=" "></textarea>
+                <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
                 <label htmlFor="message">Message</label>
               </div>
               
