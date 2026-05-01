@@ -40,15 +40,22 @@ export default function Contact() {
     e.preventDefault();
     setFormState('loading');
     
-    // Wire up to Web3Forms
-    const formData = new FormData(e.target);
-    // ⚠️ TODO: Replace this key with your own from web3forms.com
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    // Wire up to FormSubmit (No API Key Required!)
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+      _subject: "New Portfolio Message!"
+    };
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formsubmit.co/ajax/makdasansari@gmail.com", {
         method: "POST",
-        body: formData
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
