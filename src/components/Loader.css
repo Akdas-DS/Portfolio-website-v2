@@ -1,0 +1,119 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+/* AVATAR INTRO */
+.avatar-intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  filter: contrast(1.4) brightness(1.1) saturate(0);
+}
+
+.avatar-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: var(--acid-yellow);
+  mix-blend-mode: multiply;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.avatar-ring {
+  position: absolute;
+  top: -15px; left: -15px; right: -15px; bottom: -15px;
+  border: 3px dashed var(--burnt-orange);
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* TYPEWRITER TEXT */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader-name {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 10vw, 8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.cursor {
+  display: inline-block;
+  width: clamp(10px, 3vw, 24px);
+  height: clamp(3rem, 10vw, 8rem);
+  background-color: var(--acid-yellow);
+  margin-left: 8px;
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.loader-line-container {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(242, 239, 233, 0.1);
+  overflow: hidden;
+}
+
+.loader-line {
+  width: 100%;
+  height: 100%;
+  background-color: var(--acid-yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.loader-counter {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+}

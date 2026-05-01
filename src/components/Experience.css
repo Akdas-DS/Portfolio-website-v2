@@ -1,0 +1,109 @@
+.exp-section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 900px) {
+  .timeline-grid { grid-template-columns: 1fr; gap: 4rem; }
+}
+
+.col-heading {
+  font-family: var(--font-subheading);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.timeline-wrap {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(242, 239, 233, 0.1);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--burnt-orange);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--acid-yellow);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.exp-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.exp-org {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.exp-gpa {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--electric-blue);
+  margin-top: 0.5rem;
+}
+
+.exp-bullets {
+  padding-left: 1rem;
+  list-style-type: square;
+}
+
+.exp-bullets li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.cert-wrap {
+  margin-top: 4rem;
+}
+
+.cert-heading {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.cert-item {
+  margin-bottom: 1.5rem;
+}
+
+.cert-name {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

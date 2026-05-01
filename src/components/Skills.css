@@ -1,0 +1,64 @@
+.skills-section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.skill-pill {
+  position: relative;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+
+.skill-pill:hover {
+  transform: scale(1.15) !important; /* Override inline GSAP if needed */
+  z-index: 10;
+}
+
+/* Sizes */
+.skill-lg { padding: 1rem 2rem; font-size: 1.2rem; }
+.skill-md { padding: 0.8rem 1.5rem; font-size: 1rem; }
+.skill-sm { padding: 0.5rem 1rem; font-size: 0.85rem; }
+
+/* Colors */
+.skill-blue { background-color: rgba(0, 87, 255, 0.1); border: 1px solid var(--electric-blue); color: var(--text-primary); }
+.skill-orange { background-color: rgba(255, 77, 0, 0.1); border: 1px solid var(--burnt-orange); color: var(--text-primary); }
+.skill-coral { background-color: rgba(255, 51, 102, 0.1); border: 1px solid var(--coral-red); color: var(--text-primary); }
+.skill-yellow { background-color: rgba(212, 255, 0, 0.1); border: 1px solid var(--acid-yellow); color: var(--text-primary); }
+
+.skill-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: var(--surface-cards);
+  border: 1px solid rgba(242, 239, 233, 0.2);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.skill-pill:hover .skill-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
