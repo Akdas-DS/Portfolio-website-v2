@@ -16,7 +16,7 @@ export default function FloatingShapes() {
     resize();
 
     const shapes = [];
-    const colors = ['#D4FF00', '#FF4D00'];
+    const colors = ['#C69C6D', '#AD5C43'];
     const types = ['circle', 'triangle', 'square', 'plus'];
 
     for (let i = 0; i < 8; i++) {

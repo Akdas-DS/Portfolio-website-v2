@@ -6,7 +6,7 @@
   height: 50px;
   border-radius: 50%;
   background-color: var(--acid-yellow);
-  color: #0A0A0F;
+  color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;

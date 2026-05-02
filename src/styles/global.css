@@ -1,16 +1,16 @@
 :root {
-  /* COLOR PALETTE — ANTI-AI, MAXIMALIST HUMAN */
-  --bg-primary: #0A0A0F;
-  --surface-cards: #111118;
-  --text-primary: #F2EFE9;
-  --text-secondary: #9B9B8E;
+  /* COLOR PALETTE — EARTH & ORGANIC (ANTI-AI) */
+  --bg-primary: #1C1814;
+  --surface-cards: #2A241F;
+  --text-primary: #F0E7D8;
+  --text-secondary: #A69C8E;
   
-  /* ACCENT COLORS */
-  --acid-yellow: #D4FF00;
-  --burnt-orange: #FF4D00;
-  --electric-blue: #0057FF;
-  --warm-cream: #F5F0E8;
-  --coral-red: #FF3366;
+  /* ACCENT COLORS (Earthy equivalents mapped to existing variable names) */
+  --acid-yellow: #C69C6D; /* Earth gold */
+  --burnt-orange: #AD5C43; /* Terracotta clay */
+  --electric-blue: #5C6B5D; /* Moss green */
+  --warm-cream: #E8D8C8; /* Warm beige */
+  --coral-red: #8B4239; /* Rust/oxblood */
 
   /* TYPOGRAPHY */
   --font-heading: 'Bebas Neue', sans-serif;
