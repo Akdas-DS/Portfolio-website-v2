@@ -12,7 +12,7 @@ export const personalInfo = {
     { number: '14+', label: 'Projects Built' },
     { number: '9.12', label: 'CGPA' },
     { number: '7', label: 'Months at Labmentix' },
-    { number: '∞', label: 'Chai Consumed' },
+    { number: '∞', label: 'Monster Consumed' },
   ],
   marqueeText: 'AVAILABLE FOR WORK · OPEN TO OPPORTUNITIES · BASED IN MUMBAI · DATA SCIENCE · MACHINE LEARNING · ',
 };
