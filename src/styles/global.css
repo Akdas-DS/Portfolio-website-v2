@@ -1,16 +1,16 @@
 :root {
-  /* COLOR PALETTE — EARTH & ORGANIC (ANTI-AI) */
-  --bg-primary: #1C1814;
-  --surface-cards: #2A241F;
-  --text-primary: #F0E7D8;
-  --text-secondary: #A69C8E;
+  /* COLOR PALETTE — VIBRANT AUBERGINE & SUNSET (UNIQUE, ALIVE) */
+  --bg-primary: #150F16;
+  --surface-cards: #221721;
+  --text-primary: #FDF5E6;
+  --text-secondary: #B89CA8;
   
-  /* ACCENT COLORS (Earthy equivalents mapped to existing variable names) */
-  --acid-yellow: #C69C6D; /* Earth gold */
-  --burnt-orange: #AD5C43; /* Terracotta clay */
-  --electric-blue: #5C6B5D; /* Moss green */
-  --warm-cream: #E8D8C8; /* Warm beige */
-  --coral-red: #8B4239; /* Rust/oxblood */
+  /* ACCENT COLORS (Vibrant, eye-catching, mapped to existing variable names) */
+  --acid-yellow: #FFC300; /* Bright Marigold */
+  --burnt-orange: #FF5E00; /* Vivid Blood Orange */
+  --electric-blue: #00E6C3; /* Striking Teal/Mint */
+  --warm-cream: #FFAAA5; /* Pastel Peach */
+  --coral-red: #FF0055; /* Vibrant Strawberry */
 
   /* TYPOGRAPHY */
   --font-heading: 'Bebas Neue', sans-serif;
